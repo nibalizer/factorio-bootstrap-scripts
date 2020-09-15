@@ -12,6 +12,10 @@ export FACTORIO_SERVER_DESCRIPTION=${FACTORIO_SERVER_DESCRIPTION:-"Try to keep y
 export FACTORIO_RESOURCE_COUNT=${FACTORIO_RESOURCE_COUNT:-"3"}
 export FACTORIO_BITER_FREE_ZONE=$((FACTORIO_RESOURCE_COUNT * 2))
 
+
+docker stop factorio
+docker rm factorio
+
 sudo mkdir -p /opt/factorio
 sudo mkdir -p /opt/factorio/config
 
