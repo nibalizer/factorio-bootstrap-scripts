@@ -15,8 +15,8 @@ export FACTORIO_BITER_FREE_ZONE=$((FACTORIO_RESOURCE_COUNT * 2))
 sudo mkdir -p /opt/factorio
 sudo mkdir -p /opt/factorio/config
 
-SERVER_SETTINGS_TEMPLATE=${HOME}/gen_factorio_configs/server-settings.json
-MAP_SETTINGS_TEMPLATE=${HOME}/gen_factorio_configs/map-gen-settings.json
+SERVER_SETTINGS_TEMPLATE=gen_factorio_configs/server-settings.json
+MAP_SETTINGS_TEMPLATE=gen_factorio_configs/map-gen-settings.json
 
 SERVER_SETTINGS_TARGET=/opt/factorio/config/server-settings.json
 MAP_SETTINGS_TARGET=/opt/factorio/config/map-gen-settings.json
