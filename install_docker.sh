@@ -14,7 +14,7 @@ echo "dpkg lock is ours!"
 
 sudo apt-get update
 
-sudo apt-get install -y \
+sudo UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -32,8 +32,8 @@ sudo add-apt-repository \
    stable"
 
 sudo apt-get update
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-sudo apt-get install -y docker-compose
+sudo UCF_FORCE_CONFOLD=1 DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -qq -y install \
+docker-ce docker-ce-cli containerd.io docker-compose
 
 sudo usermod -aG docker ubuntu
 
