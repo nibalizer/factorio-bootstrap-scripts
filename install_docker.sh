@@ -1,6 +1,17 @@
 #!/bin/bash
 
 #18.04.1 LTS
+
+#!/bin/bash
+
+while $(lsof -w /var/lib/dpkg/lock>/dev/null)
+do
+    echo "dpkg lock is active"
+    sleep 1
+done
+echo "dpkg lock is ours!"
+
+
 sudo apt-get update
 
 sudo apt-get install -y \
