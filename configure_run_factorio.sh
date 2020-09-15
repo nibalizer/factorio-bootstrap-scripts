@@ -12,6 +12,7 @@ export FACTORIO_SERVER_DESCRIPTION=${FACTORIO_SERVER_DESCRIPTION:-"Try to keep y
 export FACTORIO_RESOURCE_COUNT=${FACTORIO_RESOURCE_COUNT:-"3"}
 export FACTORIO_BITER_FREE_ZONE=$((FACTORIO_RESOURCE_COUNT * 2))
 
+echo ====== BEGIN CONFIGURE SCRIPT =======
 
 docker stop factorio
 docker rm factorio
@@ -43,3 +44,7 @@ docker run -d \
   --name factorio \
   --restart=always \
   factoriotools/factorio
+
+sleep 3
+
+docker logs factorio
