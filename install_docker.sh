@@ -1,9 +1,6 @@
 #!/bin/bash
 
-#18.04.1 LTS
-
-#!/bin/bash
-
+#TODO replace polling with `cloud-init status` 
 while $(lsof -w /var/lib/dpkg/lock>/dev/null)
 do
     echo "dpkg lock is active"
